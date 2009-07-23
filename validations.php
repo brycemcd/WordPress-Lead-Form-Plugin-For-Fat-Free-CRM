@@ -10,7 +10,7 @@ function validateForm() {
 	var reqFields = $$('.required');
 	reqFields.each(function(item, index){
 		if (!$(item).value) { 
-			displayError(item,  item.name + " is a required field" ); 
+			displayError(item,  item.alt + " is a required field" ); 
 			errors++; 
 		}
 	});
