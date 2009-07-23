@@ -19,12 +19,12 @@
 	<span class="req">* = required field</span> 
 	<p>
 		Your First Name<span class="req">*</span>: <br>
-		<input type="text" name="first_name" alt="First Name" value="" id="first_name" class="required" />
+		<input type="text" name="First Name" value="" id="first_name" class="required" />
 	</p>
 	
 	<p>
 		Your Last Name<span class="req">*</span> :<br>
-		<input type="text" name="last_name" alt="Last Name" value="" id="last_name" class="required"/>
+		<input type="text" name="Last Name" value="" id="last_name" class="required"/>
 	</p>
 	
 	<p>
