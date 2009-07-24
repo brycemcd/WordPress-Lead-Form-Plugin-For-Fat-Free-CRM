@@ -19,12 +19,12 @@
 	<span class="req">* = required field</span> 
 	<p>
 		Your First Name<span class="req">*</span>: <br>
-		<input type="text" alt="First Name" name="first_name" value="" id="first_name" class="required" />
+		<input type="text" name="First Name" value="" id="first_name" class="required" />
 	</p>
 	
 	<p>
 		Your Last Name<span class="req">*</span> :<br>
-		<input type="text" alt="Last Name" name="last_name" value="" id="last_name" class="required"/>
+		<input type="text" name="Last Name" value="" id="last_name" class="required"/>
 	</p>
 	
 	<p>
@@ -47,7 +47,7 @@
 	</p>
 
 	<p id="contact-button">
-	<input type="image" value="contact" name="contact" id="contact" src="<?= show_img('contact.jpg') ?>" onclick="validateForm(); return false;">
+	<input type="image" value="contact" name="contact" id="contact" src="<?= contact_img() ?>" onclick="validateForm(); return false;">
 	</p>
 </form>
 <?php endif; ?>

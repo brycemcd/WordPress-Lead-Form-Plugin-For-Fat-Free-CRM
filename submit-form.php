@@ -9,10 +9,7 @@ function cleanUserData($post) {
 if ($_POST) {
 	$post = cleanUserData($_POST);
 	
-	//Redundant, but keeps it clean
-	$campaign_id = get_option("crm_campaign_id");
-	$assigned_to = get_option("crm_user_id");
-	$xml = "<request><lead><access>Private</access><campaign-id>{$campaign_id}</campaign-id><company></company><email >{$post["email"]}</email><first-name>{$post["first_name"]}</first-name><last-name>{$post["last_name"]}</last-name><phone>{$post["last_name"]}</phone><assigned-to>{$assigned_to}</assigned-to><blog>{$post["website"]}</blog></lead><comment>{$post["comment"]}</comment></request>";
+	$xml = "<request><lead><access>Private</access><campaign-id>2</campaign-id><company></company><email >{$post["email"]}</email><first-name>{$post["first_name"]}</first-name><last-name>{$post["last_name"]}</last-name><phone>{$post["last_name"]}</phone><assigned-to>1</assigned-to><blog>{$post["website"]}</blog></lead><comment>{$post["comment"]}</comment></request>";
 	
 	$session = curl_init();
 	curl_setopt($session,CURLOPT_URL, get_option("crm_url") );

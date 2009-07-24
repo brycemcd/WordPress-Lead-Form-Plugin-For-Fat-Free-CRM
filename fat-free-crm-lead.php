@@ -5,30 +5,32 @@ Description: This is a simple wordpress plugin that takes user input as a form a
 Author: Bryce McDonnell
 Version: 0.1
 Author URI: http://www.brycemcdonnell.com
-*/
+**/
 
 ?>
 <?php
-function the_lead_form() {
-	include "the-form.php";
-}
-
-add_action('admin_menu', 'CRM_lead_form_menu');
-add_action('admin_init', 'register_mysettings');
-
-function CRM_lead_form_menu() {
- 	add_options_page('My Plugin Options', 'Fat Free CRM Leads', 8, 'fat-free-crm-leads', 'my_plugin_options');
-}
-function show_img($img) {
-	return WP_PLUGIN_URL.'/'.str_replace(basename( __FILE__),"",plugin_basename(__FILE__)). $img;
-}
-function register_mysettings() { // whitelist options
-  register_setting( 'myoption-group', 'crm_url' );
-}
-function my_plugin_options() {
-	if ($_POST["url"]) {
-		update_option("crm_url", strip_tags(stripslashes($_POST["url"])));
-	}
-  	include "admin-form.php";
-}
+#function the_lead_form() {
+#	include "the-form.php";
+#}
 ?>
+
+<?php
+add_action('admin_menu', 'CRM_lead_form_menu');
+add_action('admin_init', 'register_mysettings' );
+
+#function CRM_lead_form_menu() {
+#  add_options_page('My Plugin Options', 'Fat Free CRM Leads', 8, 'fat-free-crm-leads', 'my_plugin_options');
+#}
+#function contact_img() {
+#	return WP_PLUGIN_URL.'/'.str_replace(basename( __FILE__),"",plugin_basename(__FILE__)). "contact.jpg";
+#}
+#function register_mysettings() { // whitelist options
+#  register_setting( 'myoption-group', 'crm_url' );
+#}
+#function my_plugin_options() {
+#	if ($_POST["url"]) {
+#		update_option("crm_url", strip_tags(stripslashes($_POST["url"])));
+#	}
+#  	include "admin-form.php";
+#}
+#?>
