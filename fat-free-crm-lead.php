@@ -10,20 +10,17 @@ Author URI: http://www.brycemcdonnell.com
 ?>
 <?php
 function the_lead_form() {
-	add_option("crm_url", "hello world");
 	include "the-form.php";
 }
-?>
 
-<?php
 add_action('admin_menu', 'CRM_lead_form_menu');
-add_action( 'admin_init', 'register_mysettings' );
+add_action('admin_init', 'register_mysettings');
 
 function CRM_lead_form_menu() {
-  add_options_page('My Plugin Options', 'Fat Free CRM Leads', 8, 'fat-free-crm-leads', 'my_plugin_options');
+ 	add_options_page('My Plugin Options', 'Fat Free CRM Leads', 8, 'fat-free-crm-leads', 'my_plugin_options');
 }
-function contact_img() {
-	return WP_PLUGIN_URL.'/'.str_replace(basename( __FILE__),"",plugin_basename(__FILE__)). "contact.jpg";
+function show_img($img) {
+	return WP_PLUGIN_URL.'/'.str_replace(basename( __FILE__),"",plugin_basename(__FILE__)). $img;
 }
 function register_mysettings() { // whitelist options
   register_setting( 'myoption-group', 'crm_url' );
