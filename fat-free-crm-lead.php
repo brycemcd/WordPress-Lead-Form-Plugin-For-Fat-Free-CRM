@@ -39,8 +39,8 @@ add_action('admin_init', 'register_mysettings' );
 function CRM_lead_form_menu() {
   add_options_page('My Plugin Options', 'Fat Free CRM Leads', 8, 'fat-free-crm-leads', 'my_plugin_options');
 }
-function show_img($img) {
-	return WP_PLUGIN_URL.'/'.str_replace(basename( __FILE__),"",plugin_basename(__FILE__)). $img;
+function contact_img() {
+	return WP_PLUGIN_URL.'/'.str_replace(basename( __FILE__),"",plugin_basename(__FILE__)). "contact.jpg";
 }
 function register_mysettings() { // whitelist options
   register_setting( 'myoption-group', 'crm_url' );
