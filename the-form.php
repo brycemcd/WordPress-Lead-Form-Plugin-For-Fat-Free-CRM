@@ -65,7 +65,7 @@
 	<?php endif; ?>
 
 	<p id="contact-button">
-	<input type="image" value="contact" name="contact" id="contact" src="<?= contact_img() ?>" onclick="validateForm(); return false;">
+	<input type="image" value="contact" name="contact" id="contact" src="<?= show_img("contact.jpg") ?>" onclick="validateForm(); return false;">
 	</p>
 </form>
 <?php endif; ?>
